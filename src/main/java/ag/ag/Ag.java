@@ -149,7 +149,6 @@ public class Ag implements ModInitializer {
 
         // Steel
         Registry.register(Registry.ITEM, new Identifier("ag", "steel_block"), new BlockItem(STEEL_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-        Registry.register(Registry.ITEM, new Identifier("ag", "steel_ingot"), STEEL_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "steel_shovel"), STEEL_SHOVEL);
         Registry.register(Registry.ITEM, new Identifier("ag", "steel_pickaxe"), STEEL_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier("ag", "steel_axe"), STEEL_AXE);
@@ -166,7 +165,6 @@ public class Ag implements ModInitializer {
         // Titanium
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_ore"), new BlockItem(TITANIUM_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_block"), new BlockItem(TITANIUM_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-        Registry.register(Registry.ITEM, new Identifier("ag", "titanium_ingot"), TITANIUM_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_shovel"), TITANIUM_SHOVEL);
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_pickaxe"), TITANIUM_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_axe"), TITANIUM_AXE);
