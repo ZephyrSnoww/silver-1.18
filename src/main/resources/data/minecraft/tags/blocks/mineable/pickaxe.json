@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ag:steel_block",
+    "ag:titanium_ore",
+    "ag:titanium_block",
+    "ag:rainbowfire_obsidian"
+  ]
+}

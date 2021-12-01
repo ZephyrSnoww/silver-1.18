@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ag:block/aerogel_block"
+    }
+  }
+}
