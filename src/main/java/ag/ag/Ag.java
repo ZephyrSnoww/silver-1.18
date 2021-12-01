@@ -39,6 +39,7 @@ public class Ag implements ModInitializer {
     public static Item TITANIUM_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item STEEL_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item STERLING_STEEL_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+    public static Item CARBON = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
     // Tools
     // Copper
@@ -132,6 +133,7 @@ public class Ag implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("ag", "steel_ingot"), STEEL_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_ingot"), TITANIUM_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "sterling_steel_ingot"), STERLING_STEEL_INGOT);
+        Registry.register(Registry.ITEM, new Identifier("ag", "carbon"), CARBON);
 
         // Copper
         Registry.register(Registry.ITEM, new Identifier("ag", "copper_shovel"), COPPER_SHOVEL);
