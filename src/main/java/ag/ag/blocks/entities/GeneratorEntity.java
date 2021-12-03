@@ -9,4 +9,6 @@ public class GeneratorEntity extends BlockEntity {
     public GeneratorEntity(BlockPos blockPos, BlockState blockState) {
         super(Ag.GENERATOR_ENTITY, blockPos, blockState);
     }
+
+    public Nbt
 }
