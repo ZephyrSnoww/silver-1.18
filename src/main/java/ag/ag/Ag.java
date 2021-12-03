@@ -1,5 +1,6 @@
 package ag.ag;
 
+import ag.ag.blocks.screenHandlers.GeneratorScreenHandler;
 import ag.ag.items.*;
 import ag.ag.items.materials.*;
 import ag.ag.blocks.*;
@@ -7,12 +8,14 @@ import ag.ag.blocks.entities.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -114,9 +117,11 @@ public class Ag implements ModInitializer {
 //    public static CustomSword AEROGEL_SWORD = new CustomSword(AerogelMaterial.INSTANCE, -2f, new CustomItemSettings(new Item.Settings().group(ItemGroup.COMBAT)));
 
     public static BlockEntityType<GeneratorEntity> GENERATOR_ENTITY;
+    public static ScreenHandlerType<GeneratorScreenHandler> GENERATOR_SCREEN_HANDLER;
 
     @Override
     public void onInitialize() {
+        GENERATOR_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier("ag", "generator"), GeneratorScreenHandler::new);
         GENERATOR_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier("ag", "generator_block_entity"), FabricBlockEntityTypeBuilder.create(GeneratorEntity::new, GENERATOR).build(null));
 
         // Blocks
