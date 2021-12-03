@@ -1,9 +1,11 @@
 {
-  "parent": "block/orientable",
+  "parent": "block/furnace",
   "textures": {
-    "front": "ag:block/generator_front_off",
-    "top": "ag:block/generator_top",
-    "side": "ag:block/generator_side",
-    "back": "ag:block/generator_back_off"
+    "north": "ag:block/generator_front_off",
+    "up": "ag:block/generator_top",
+    "east": "ag:block/generator_side",
+    "west": "ag:block/generator_side",
+    "south": "ag:block/generator_back_off",
+    "down": "ag:block/generator_top"
   }
 }

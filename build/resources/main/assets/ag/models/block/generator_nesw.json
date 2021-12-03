@@ -1,0 +1,8 @@
+{
+  "parent": "block/furnace",
+  "textures": {
+    "front": "ag:block/generator_front_off",
+    "top": "ag:block/generator_top",
+    "side": "ag:block/generator_side",
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "parent": "block/orientable",
+  "parent": "block/furnace",
   "textures": {
     "north": "ag:block/generator_front_off",
     "up": "ag:block/generator_top",
