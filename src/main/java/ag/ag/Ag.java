@@ -32,7 +32,8 @@ public class Ag implements ModInitializer {
     public static Block RAINBOWFIRE_OBSIDIAN = new Block(FabricBlockSettings.of(Material.STONE).hardness(75f).resistance(1500f).requiresTool());
 
     public static Block BLOCK_OF_CARBON = new Block(FabricBlockSettings.of(Material.METAL));
-
+    public static Block FIBERGLASS = new Block(FabricBlockSettings.of(Material.GLASS));
+    public static Block BLOCK_OF_SILICON = new Block(FabricBlockSettings.of(Material.METAL));
     public static PinkLotus PINK_LOTUS = new PinkLotus(FabricBlockSettings.of(Material.UNDERWATER_PLANT));
 
     // Items
@@ -42,6 +43,8 @@ public class Ag implements ModInitializer {
     public static Item STEEL_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item STERLING_STEEL_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item CARBON = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+    public static Item SILICON = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+
 
     // Tools
     // Copper
@@ -121,6 +124,12 @@ public class Ag implements ModInitializer {
 
         Registry.register(Registry.BLOCK, new Identifier("ag", "pink_lotus"), PINK_LOTUS);
         Registry.register(Registry.ITEM, new Identifier("ag", "pink_lotus"), new BlockItem(PINK_LOTUS, new Item.Settings().group(ItemGroup.DECORATIONS)));
+        Registry.register(Registry.BLOCK, new Identifier("ag", "fiberglass"), FIBERGLASS);
+        Registry.register(Registry.ITEM, new Identifier("ag", "fiberglass"), new BlockItem(FIBERGLASS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+
+        Registry.register(Registry.BLOCK, new Identifier("ag", "block_of_silicon"), BLOCK_OF_SILICON);
+        Registry.register(Registry.ITEM, new Identifier("ag", "block_of_silicon"), new BlockItem(BLOCK_OF_SILICON, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+
 
         // Rainbowfire obsidian
         Registry.register(Registry.BLOCK, new Identifier("ag", "rainbowfire_obsidian"), RAINBOWFIRE_OBSIDIAN);
@@ -138,6 +147,7 @@ public class Ag implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_ingot"), TITANIUM_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "sterling_steel_ingot"), STERLING_STEEL_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "carbon"), CARBON);
+        Registry.register(Registry.ITEM, new Identifier("ag", "silicon"), SILICON);
 
         // Copper
         Registry.register(Registry.ITEM, new Identifier("ag", "copper_shovel"), COPPER_SHOVEL);
