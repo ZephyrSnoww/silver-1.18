@@ -61,5 +61,6 @@
   "item.ag.silicon": "Silicon",
   "block.ag.fiberglass": "Fiberglass",
   "item.ag.solar_cell": "Solar Cell",
-  "item.ag.circut": "Circut"
+  "item.ag.circut": "Circut",
+  "block.ag.solar_panel": "Solar Panel"
 }

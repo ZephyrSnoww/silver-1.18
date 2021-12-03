@@ -35,6 +35,7 @@ public class Ag implements ModInitializer {
     public static Block FIBERGLASS = new Block(FabricBlockSettings.of(Material.GLASS));
     public static Block BLOCK_OF_SILICON = new Block(FabricBlockSettings.of(Material.METAL));
     public static PinkLotus PINK_LOTUS = new PinkLotus(FabricBlockSettings.of(Material.UNDERWATER_PLANT));
+    public static Block SOLAR_PANEL = new Block(FabricBlockSettings.of(Material.STONE));
 
     // Items
     public static Item BLOOD = new Item(new Item.Settings().group(ItemGroup.BREWING));
@@ -130,7 +131,8 @@ public class Ag implements ModInitializer {
 
         Registry.register(Registry.BLOCK, new Identifier("ag", "block_of_silicon"), BLOCK_OF_SILICON);
         Registry.register(Registry.ITEM, new Identifier("ag", "block_of_silicon"), new BlockItem(BLOCK_OF_SILICON, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-
+        Registry.register(Registry.BLOCK, new Identifier("ag", "solar_panel"), SOLAR_PANEL);
+        Registry.register(Registry.ITEM, new Identifier("ag", "solar_panel"), new BlockItem(SOLAR_PANEL, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
         // Rainbowfire obsidian
         Registry.register(Registry.BLOCK, new Identifier("ag", "rainbowfire_obsidian"), RAINBOWFIRE_OBSIDIAN);
