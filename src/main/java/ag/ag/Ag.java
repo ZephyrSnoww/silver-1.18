@@ -47,6 +47,7 @@ public class Ag implements ModInitializer {
     public static Item SILICON = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item SOLAR_CELL = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item CIRCUT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+    public static Item COMPUTER_CHIP = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
     // Tools
     // Copper
@@ -153,6 +154,7 @@ public class Ag implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("ag", "silicon"), SILICON);
         Registry.register(Registry.ITEM, new Identifier("ag", "solar_cell"), SOLAR_CELL);
         Registry.register(Registry.ITEM, new Identifier("ag", "circut"), CIRCUT);
+        Registry.register(Registry.ITEM, new Identifier("ag", "computer_chip"), COMPUTER_CHIP);
 
         // Copper
         Registry.register(Registry.ITEM, new Identifier("ag", "copper_shovel"), COPPER_SHOVEL);

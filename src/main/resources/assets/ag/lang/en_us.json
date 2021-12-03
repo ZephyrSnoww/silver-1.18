@@ -45,13 +45,6 @@
   "item.ag.carbon_nanotube_sword": "Carbon Nanotube Sword",
   "item.ag.carbon_nanotube_shovel": "Carbon Nanotube Shovel",
   "item.ag.carbon_nanotube_pickaxe": "Carbon Nanotube Pickaxe",
-//  "item.ag.aerogel_axe": "Aerogel Axe",
-//  "item.ag.aerogel_hoe": "Aerogel Hoe",
-//  "item.ag.aerogel_sword": "Aerogel Sword",
-//  "item.ag.aerogel_shovel": "Aerogel Shovel",
-//  "item.ag.aerogel_pickaxe": "Aerogel Pickaxe",
-//  "item.ag.blood": "Blood",
-  "block.ag.aerogel_block": "Aerogel Block",
   "block.ag.generator": "Generator",
   "block.ag.pink_lotus": "Pink Lotus",
   "item.ag.sterling_steel_ingot": "Sterling Steel Ingot",
@@ -62,5 +55,6 @@
   "block.ag.fiberglass": "Fiberglass",
   "item.ag.solar_cell": "Solar Cell",
   "item.ag.circut": "Circut",
-  "block.ag.solar_panel": "Solar Panel"
+  "block.ag.solar_panel": "Solar Panel",
+  "item.ag.computer_chip": "Computer Chip"
 }
