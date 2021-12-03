@@ -59,5 +59,7 @@
   "block.ag.block_of_carbon": "Block of Carbon",
   "block.ag.block_of_silicon": "Block of Silicon",
   "item.ag.silicon": "Silicon",
-  "block.ag.fiberglass": "Fiberglass"
+  "block.ag.fiberglass": "Fiberglass",
+  "item.ag.solar_cell": "Solar Cell",
+  "item.ag.circut": "Circut"
 }
