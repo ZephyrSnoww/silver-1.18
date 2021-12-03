@@ -3,6 +3,7 @@ package ag.ag.blocks.entities;
 import ag.ag.Ag;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
 
 public class GeneratorEntity extends BlockEntity {
@@ -10,5 +11,10 @@ public class GeneratorEntity extends BlockEntity {
         super(Ag.GENERATOR_ENTITY, blockPos, blockState);
     }
 
-//    public Nbt
+    @Override
+    public void writeNbt(NbtCompound tag) {
+        super.writeNbt(tag);
+
+        tag.putInt("number", 1);
+    }
 }
