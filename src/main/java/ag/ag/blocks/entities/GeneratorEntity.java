@@ -10,5 +10,5 @@ public class GeneratorEntity extends BlockEntity {
         super(Ag.GENERATOR_ENTITY, blockPos, blockState);
     }
 
-    public Nbt
+//    public Nbt
 }
