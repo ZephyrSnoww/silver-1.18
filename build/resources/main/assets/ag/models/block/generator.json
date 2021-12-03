@@ -1,6 +1,9 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/orientable",
   "textures": {
-    "all": "ag:block/generator"
+    "front": "ag:block/generator_front_off",
+    "top": "ag:block/generator_top",
+    "side": "ag:block/generator_side",
+    "back": "ag:block/generator_back_off"
   }
 }
