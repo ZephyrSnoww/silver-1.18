@@ -55,5 +55,11 @@
   "block.ag.generator": "Generator",
   "block.ag.pink_lotus": "Pink Lotus",
   "item.ag.sterling_steel_ingot": "Sterling Steel Ingot",
-  "item.ag.carbon": "Carbon"
+  "item.ag.carbon": "Carbon",
+  "block.ag.block_of_carbon": "Block of Carbon",
+  "block.ag.block_of_silicon": "Block of Silicon",
+  "item.ag.silicon": "Silicon",
+  "block.ag.fiberglass": "Fiberglass",
+  "item.ag.solar_cell": "Solar Cell",
+  "item.ag.circut": "Circut"
 }
