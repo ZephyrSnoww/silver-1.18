@@ -115,7 +115,7 @@ public class Ag implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        GENERATOR_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "tutorial:demo_block_entity", FabricBlockEntityTypeBuilder.create(GeneratorEntity::new, GENERATOR).build(null));
+        GENERATOR_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier("ag", "generator_block_entity"), FabricBlockEntityTypeBuilder.create(GeneratorEntity::new, GENERATOR).build(null));
 
         // Blocks
         Registry.register(Registry.BLOCK, new Identifier("ag", "generator"), GENERATOR);
