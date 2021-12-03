@@ -35,9 +35,10 @@ public class Ag implements ModInitializer {
     public static Block FIBERGLASS = new Block(FabricBlockSettings.of(Material.GLASS));
     public static Block BLOCK_OF_SILICON = new Block(FabricBlockSettings.of(Material.METAL));
     public static PinkLotus PINK_LOTUS = new PinkLotus(FabricBlockSettings.of(Material.UNDERWATER_PLANT));
+    public static Block SOLAR_PANEL = new Block(FabricBlockSettings.of(Material.STONE));
 
     // Items
-    public static Item BLOOD = new Item(new Item.Settings().group(ItemGroup.BREWING));
+//    public static Item BLOOD = new Item(new Item.Settings().group(ItemGroup.BREWING));
 
     public static Item TITANIUM_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item STEEL_INGOT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
@@ -46,6 +47,7 @@ public class Ag implements ModInitializer {
     public static Item SILICON = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item SOLAR_CELL = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
     public static Item CIRCUT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+    public static Item COMPUTER_CHIP = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
     // Tools
     // Copper
@@ -105,11 +107,11 @@ public class Ag implements ModInitializer {
     public static CustomSword CARBON_NANOTUBE_SWORD = new CustomSword(CarbonNanotubeMaterial.INSTANCE, -2.2f, new CustomItemSettings(new Item.Settings().group(ItemGroup.COMBAT)));
 
     // Aerogel
-    public static CustomShovel AEROGEL_SHOVEL = new CustomShovel(AerogelMaterial.INSTANCE, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
-    public static CustomPickaxe AEROGEL_PICKAXE = new CustomPickaxe(AerogelMaterial.INSTANCE, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
-    public static CustomAxe AEROGEL_AXE = new CustomAxe(AerogelMaterial.INSTANCE, -2.7f, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
-    public static CustomHoe AEROGEL_HOE = new CustomHoe(AerogelMaterial.INSTANCE, 3, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
-    public static CustomSword AEROGEL_SWORD = new CustomSword(AerogelMaterial.INSTANCE, -2f, new CustomItemSettings(new Item.Settings().group(ItemGroup.COMBAT)));
+//    public static CustomShovel AEROGEL_SHOVEL = new CustomShovel(AerogelMaterial.INSTANCE, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
+//    public static CustomPickaxe AEROGEL_PICKAXE = new CustomPickaxe(AerogelMaterial.INSTANCE, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
+//    public static CustomAxe AEROGEL_AXE = new CustomAxe(AerogelMaterial.INSTANCE, -2.7f, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
+//    public static CustomHoe AEROGEL_HOE = new CustomHoe(AerogelMaterial.INSTANCE, 3, new CustomItemSettings(new Item.Settings().group(ItemGroup.TOOLS)));
+//    public static CustomSword AEROGEL_SWORD = new CustomSword(AerogelMaterial.INSTANCE, -2f, new CustomItemSettings(new Item.Settings().group(ItemGroup.COMBAT)));
 
     public static BlockEntityType<GeneratorEntity> GENERATOR_ENTITY;
 
@@ -130,7 +132,8 @@ public class Ag implements ModInitializer {
 
         Registry.register(Registry.BLOCK, new Identifier("ag", "block_of_silicon"), BLOCK_OF_SILICON);
         Registry.register(Registry.ITEM, new Identifier("ag", "block_of_silicon"), new BlockItem(BLOCK_OF_SILICON, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-
+        Registry.register(Registry.BLOCK, new Identifier("ag", "solar_panel"), SOLAR_PANEL);
+        Registry.register(Registry.ITEM, new Identifier("ag", "solar_panel"), new BlockItem(SOLAR_PANEL, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
         // Rainbowfire obsidian
         Registry.register(Registry.BLOCK, new Identifier("ag", "rainbowfire_obsidian"), RAINBOWFIRE_OBSIDIAN);
@@ -143,7 +146,7 @@ public class Ag implements ModInitializer {
         Registry.register(Registry.BLOCK, new Identifier("ag", "steel_block"), STEEL_BLOCK);
 
         // Items
-        Registry.register(Registry.ITEM, new Identifier("ag", "blood"), BLOOD);
+//        Registry.register(Registry.ITEM, new Identifier("ag", "blood"), BLOOD);
         Registry.register(Registry.ITEM, new Identifier("ag", "steel_ingot"), STEEL_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "titanium_ingot"), TITANIUM_INGOT);
         Registry.register(Registry.ITEM, new Identifier("ag", "sterling_steel_ingot"), STERLING_STEEL_INGOT);
@@ -151,6 +154,7 @@ public class Ag implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("ag", "silicon"), SILICON);
         Registry.register(Registry.ITEM, new Identifier("ag", "solar_cell"), SOLAR_CELL);
         Registry.register(Registry.ITEM, new Identifier("ag", "circut"), CIRCUT);
+        Registry.register(Registry.ITEM, new Identifier("ag", "computer_chip"), COMPUTER_CHIP);
 
         // Copper
         Registry.register(Registry.ITEM, new Identifier("ag", "copper_shovel"), COPPER_SHOVEL);
@@ -212,11 +216,11 @@ public class Ag implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("ag", "carbon_nanotube_hoe"), CARBON_NANOTUBE_HOE);
         Registry.register(Registry.ITEM, new Identifier("ag", "carbon_nanotube_sword"), CARBON_NANOTUBE_SWORD);
 
-        // Aerogel
-        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_shovel"), AEROGEL_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_pickaxe"), AEROGEL_PICKAXE);
-        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_axe"), AEROGEL_AXE);
-        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_hoe"), AEROGEL_HOE);
-        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_sword"), AEROGEL_SWORD);
+//        // Aerogel
+//        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_shovel"), AEROGEL_SHOVEL);
+//        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_pickaxe"), AEROGEL_PICKAXE);
+//        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_axe"), AEROGEL_AXE);
+//        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_hoe"), AEROGEL_HOE);
+//        Registry.register(Registry.ITEM, new Identifier("ag", "aerogel_sword"), AEROGEL_SWORD);
     }
 }
