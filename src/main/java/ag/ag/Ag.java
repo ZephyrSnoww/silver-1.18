@@ -31,6 +31,8 @@ public class Ag implements ModInitializer {
 
     public static Block RAINBOWFIRE_OBSIDIAN = new Block(FabricBlockSettings.of(Material.STONE).hardness(75f).resistance(1500f).requiresTool());
 
+    public static Block BLOCK_OF_CARBON = new Block(FabricBlockSettings.of(Material.METAL));
+
     public static PinkLotus PINK_LOTUS = new PinkLotus(FabricBlockSettings.of(Material.UNDERWATER_PLANT));
 
     // Items
@@ -114,6 +116,8 @@ public class Ag implements ModInitializer {
         // Blocks
         Registry.register(Registry.BLOCK, new Identifier("ag", "generator"), GENERATOR);
         Registry.register(Registry.ITEM, new Identifier("ag", "generator"), new BlockItem(GENERATOR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+        Registry.register(Registry.BLOCK, new Identifier("ag", "block_of_carbon"), BLOCK_OF_CARBON);
+        Registry.register(Registry.ITEM, new Identifier("ag", "block_of_carbon"), new BlockItem(BLOCK_OF_CARBON, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
         Registry.register(Registry.BLOCK, new Identifier("ag", "pink_lotus"), PINK_LOTUS);
         Registry.register(Registry.ITEM, new Identifier("ag", "pink_lotus"), new BlockItem(PINK_LOTUS, new Item.Settings().group(ItemGroup.DECORATIONS)));
