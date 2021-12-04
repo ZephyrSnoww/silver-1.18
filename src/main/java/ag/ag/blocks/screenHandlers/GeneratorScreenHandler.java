@@ -33,7 +33,7 @@ public class GeneratorScreenHandler extends ScreenHandler {
             this.addSlot(new Slot(playerInventory, m, 8 + m * 18, 142));
         }
 
-        this.addSlot(new Slot(inventory, 0, 46, 32));
+        this.addSlot(new Slot(inventory, 0, 80, 42));
     }
 
     @Override
