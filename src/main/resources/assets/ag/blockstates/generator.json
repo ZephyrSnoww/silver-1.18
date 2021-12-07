@@ -1,7 +1,23 @@
 {
   "variants": {
-    "": {
-      "model": "ag:block/generator"
+    "facing=north": {
+      "model": "ag:block/generator",
+      "uvlock": true
+    },
+    "facing=south":  {
+      "model": "ag:block/generator",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west": {
+      "model": "ag:block/generator",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east": {
+      "model": "ag:block/generator",
+      "y": 90,
+      "uvlock": true
     }
   }
 }
