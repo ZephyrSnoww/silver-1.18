@@ -1,10 +1,12 @@
 package ag.ag.blocks;
 
-import ag.ag.blocks.entities.GeneratorEntity;
-import net.minecraft.block.*;
+import ag.ag.blocks.entities.ElectricFurnaceEntity;
+import net.minecraft.block.BlockEntityProvider;
+import net.minecraft.block.BlockRenderType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
@@ -14,12 +16,11 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
-public class Generator extends BlockWithEntity implements BlockEntityProvider {
-    public Generator(Settings settings) {
+public class ElectricFurnace extends BlockWithEntity implements BlockEntityProvider {
+    public ElectricFurnace(Settings settings) {
         super(settings);
 //        setDefaultState(this.getStateManager().getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
 //        WHAT ZE FUCK
@@ -27,7 +28,7 @@ public class Generator extends BlockWithEntity implements BlockEntityProvider {
 
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new GeneratorEntity(pos, state);
+        return new ElectricFurnaceEntity(pos, state);
     }
 
     @Override
@@ -53,8 +54,8 @@ public class Generator extends BlockWithEntity implements BlockEntityProvider {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
 
-            if (blockEntity instanceof GeneratorEntity) {
-                ItemScatterer.spawn(world, pos, (GeneratorEntity) blockEntity);
+            if (blockEntity instanceof ElectricFurnaceEntity) {
+                ItemScatterer.spawn(world, pos, (ElectricFurnaceEntity) blockEntity);
                 world.updateComparators(pos, this);
             }
 

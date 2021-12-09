@@ -1,5 +1,6 @@
 package ag.ag;
 
+import ag.ag.blocks.screenHandlers.ElectricFurnaceScreenHandler;
 import ag.ag.blocks.screenHandlers.GeneratorScreenHandler;
 import ag.ag.items.*;
 import ag.ag.items.materials.*;
@@ -26,6 +27,7 @@ import net.minecraft.util.registry.Registry;
 public class Ag implements ModInitializer {
     // Blocks
     public static Generator GENERATOR = new Generator(FabricBlockSettings.of(Material.STONE));
+    public static ElectricFurnace ELECTRIC_FURNACE = new ElectricFurnace(FabricBlockSettings.of(Material.METAL));
 
     public static Block STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(5f).resistance(6f).requiresTool().sounds(BlockSoundGroup.METAL));
 
@@ -118,15 +120,23 @@ public class Ag implements ModInitializer {
 
     public static BlockEntityType<GeneratorEntity> GENERATOR_ENTITY;
     public static ScreenHandlerType<GeneratorScreenHandler> GENERATOR_SCREEN_HANDLER;
+    public static BlockEntityType<ElectricFurnaceEntity> ELECTRIC_FURNACE_ENTITY;
+    public static ScreenHandlerType<ElectricFurnaceScreenHandler> ELECTRIC_FURNACE_SCREEN_HANDLER;
 
     @Override
     public void onInitialize() {
         GENERATOR_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier("ag", "generator"), GeneratorScreenHandler::new);
         GENERATOR_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier("ag", "generator_block_entity"), FabricBlockEntityTypeBuilder.create(GeneratorEntity::new, GENERATOR).build(null));
+        ELECTRIC_FURNACE_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier("ag", "electric_furnace"), ElectricFurnaceScreenHandler::new);
+        ELECTRIC_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier("ag", "electric_furnace_block_entity"), FabricBlockEntityTypeBuilder.create(ElectricFurnaceEntity::new, ELECTRIC_FURNACE).build(null));
 
         // Blocks
         Registry.register(Registry.BLOCK, new Identifier("ag", "generator"), GENERATOR);
         Registry.register(Registry.ITEM, new Identifier("ag", "generator"), new BlockItem(GENERATOR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+        Registry.register(Registry.BLOCK, new Identifier("ag", "electric_furnace"), ELECTRIC_FURNACE);
+        Registry.register(Registry.ITEM, new Identifier("ag", "electric_furnace"), new BlockItem(ELECTRIC_FURNACE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+
         Registry.register(Registry.BLOCK, new Identifier("ag", "block_of_carbon"), BLOCK_OF_CARBON);
         Registry.register(Registry.ITEM, new Identifier("ag", "block_of_carbon"), new BlockItem(BLOCK_OF_CARBON, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
