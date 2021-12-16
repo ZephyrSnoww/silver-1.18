@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #c",
+    "#g#",
+    "c# "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:redstone"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "ag:circut",
+    "count": 1
+  }
+}
