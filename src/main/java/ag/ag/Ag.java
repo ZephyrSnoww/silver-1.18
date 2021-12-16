@@ -1,7 +1,6 @@
 package ag.ag;
 
-import ag.ag.blocks.screenHandlers.ElectricFurnaceScreenHandler;
-import ag.ag.blocks.screenHandlers.GeneratorScreenHandler;
+import ag.ag.blocks.screenHandlers.*;
 import ag.ag.items.*;
 import ag.ag.items.materials.*;
 import ag.ag.blocks.*;
