@@ -33,7 +33,8 @@ public class ElectricFurnaceScreenHandler extends ScreenHandler {
             this.addSlot(new Slot(playerInventory, m, 8 + m * 18, 142));
         }
 
-        this.addSlot(new Slot(inventory, 0, 80, 42));
+        this.addSlot(new Slot(inventory, 0, 56, 35));
+        this.addSlot(new Slot(inventory, 1, 116, 35));
     }
 
     @Override
