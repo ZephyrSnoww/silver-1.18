@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "front": "ag:block/electric_furnace_front",
-    "side": "ag:block/electric_furnace_side",
-    "top": "block/iron_block"
-  }
-}
