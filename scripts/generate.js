@@ -63,13 +63,17 @@ if (["item", "i"].includes(type)) {
 // If were generating a block
 else {
     const block_material = argv[5];
-    const arguments_string = argv[6];
-    const item_group = argv[7];
+    const item_group = argv[6];
+    const arguments_string = argv[7];
 
     let args_strings = [];
     
     if (!valid_block_materials.includes(block_material)) {
         throw new TypeError(`BLOCK_MATERIAL must be one of the following:\n- ${valid_block_materials.join("\n- ").toUpperCase()}`);
+    }
+
+    if (!valid_item_groups.includes(item_group)) {
+        throw new TypeError(`ITEM_GROUP must be one of the following:\n- ${valid_item_groups.join("\n- ").toUpperCase()}`)
     }
 
     if (![undefined, ""].includes(arguments_string)) {
@@ -82,10 +86,6 @@ else {
         Object.keys(args).forEach((key) => {
             args_strings.push(`.${key}(${args[key]})`);
         });
-    }
-
-    if (!valid_item_groups.includes(item_group)) {
-        throw new TypeError(`ITEM_GROUP must be one of the following:\n- ${valid_item_groups.join("\n- ").toUpperCase()}`)
     }
 
     const outputBlockCode = `public static Block ${id.toUpperCase()} = new Block(FabricBlockSettings.of(Material.${block_material.toUpperCase()})${args_strings.join("")});`;
