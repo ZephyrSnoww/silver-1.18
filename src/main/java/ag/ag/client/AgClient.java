@@ -1,8 +1,7 @@
 package ag.ag.client;
 
 import ag.ag.Ag;
-import ag.ag.blocks.screenHandlers.ElectricFurnaceScreen;
-import ag.ag.blocks.screenHandlers.GeneratorScreen;
+import ag.ag.blocks.screenHandlers.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
@@ -18,5 +17,6 @@ public class AgClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ag.ag.Ag.PINK_LOTUS);
         ScreenRegistry.register(Ag.GENERATOR_SCREEN_HANDLER, GeneratorScreen::new);
         ScreenRegistry.register(Ag.ELECTRIC_FURNACE_SCREEN_HANDLER, ElectricFurnaceScreen::new);
+        ScreenRegistry.register(Ag.ALLOY_FURNACE_SCREEN_HANDLER, AlloyFurnaceScreen::new);
     }
 }

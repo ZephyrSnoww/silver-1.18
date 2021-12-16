@@ -57,5 +57,6 @@
   "item.ag.circut": "Circut",
   "block.ag.solar_panel": "Solar Panel",
   "item.ag.computer_chip": "Computer Chip",
-  "block.ag.electric_furnace": "Electric Furnace"
+  "block.ag.electric_furnace": "Electric Furnace",
+  "block.ag.alloy_furnace": "Alloy Furnace"
 }
