@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iFi",
+    "iCi"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "C": {
+      "item": "ag:circut"
+    }
+  },
+  "result": {
+    "item": "ag:electric_furnace",
+    "count": 1
+  }
+}
