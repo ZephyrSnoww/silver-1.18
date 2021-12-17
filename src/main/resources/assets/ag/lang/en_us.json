@@ -59,5 +59,6 @@
   "item.ag.computer_chip": "Computer Chip",
   "block.ag.electric_furnace": "Electric Furnace",
   "block.ag.alloy_furnace": "Alloy Furnace",
-  "block.ag.industrial_furnace": "Industrial Furnace"
+  "block.ag.industrial_furnace": "Industrial Furnace",
+  "block.ag.arc_furnace": "Arc Furnace"
 }
