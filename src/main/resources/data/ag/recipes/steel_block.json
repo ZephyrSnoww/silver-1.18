@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "ag:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "ag:steel_block",
+    "count": 1
+  }
+}
