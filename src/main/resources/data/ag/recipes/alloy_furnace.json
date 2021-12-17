@@ -14,5 +14,9 @@
     },
     "b": {
       "item": "minecraft:blast_furnace"
-  }
+  },
+    "result": {
+      "item": "ag:alloy_furnace",
+      "count": 1
+    }
 }
