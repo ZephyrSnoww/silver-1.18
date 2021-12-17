@@ -18,5 +18,6 @@ public class AgClient implements ClientModInitializer {
         ScreenRegistry.register(Ag.GENERATOR_SCREEN_HANDLER, GeneratorScreen::new);
         ScreenRegistry.register(Ag.ELECTRIC_FURNACE_SCREEN_HANDLER, ElectricFurnaceScreen::new);
         ScreenRegistry.register(Ag.ALLOY_FURNACE_SCREEN_HANDLER, AlloyFurnaceScreen::new);
+        ScreenRegistry.register(Ag.INDUSTRIAL_FURNACE_SCREEN_HANDLER, AlloyFurnaceScreen::new);
     }
 }

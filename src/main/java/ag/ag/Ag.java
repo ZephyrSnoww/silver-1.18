@@ -28,6 +28,7 @@ public class Ag implements ModInitializer {
     public static Generator GENERATOR = new Generator(FabricBlockSettings.of(Material.STONE));
     public static ElectricFurnace ELECTRIC_FURNACE = new ElectricFurnace(FabricBlockSettings.of(Material.METAL));
     public static Block ALLOY_FURNACE = new Block(FabricBlockSettings.of(Material.METAL));
+    public static IndustrialFurnace INDUSTRIAL_FURNACE = new IndustrialFurnace(FabricBlockSettings.of(Material.METAL));
 
     public static Block STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(5f).resistance(6f).requiresTool().sounds(BlockSoundGroup.METAL));
 
@@ -127,6 +128,9 @@ public class Ag implements ModInitializer {
     public static BlockEntityType<AlloyFurnaceEntity> ALLOY_FURNACE_ENTITY;
     public static ScreenHandlerType<AlloyFurnaceScreenHandler> ALLOY_FURNACE_SCREEN_HANDLER;
 
+    public static BlockEntityType<IndustrialFurnaceEntity> INDUSTRIAL_FURNACE_ENTITY;
+    public static ScreenHandlerType<IndustrialFurnaceScreenHandler> INDUSTRIAL_FURNACE_SCREEN_HANDLER;
+
     @Override
     public void onInitialize() {
         GENERATOR_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier("ag", "generator"), GeneratorScreenHandler::new);
@@ -138,13 +142,21 @@ public class Ag implements ModInitializer {
         ALLOY_FURNACE_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier("ag", "alloy_furnace"), AlloyFurnaceScreenHandler::new);
         ALLOY_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier("ag", "alloy_furnace_block_entity"), FabricBlockEntityTypeBuilder.create(AlloyFurnaceEntity::new, ALLOY_FURNACE).build(null));
 
+        INDUSTRIAL_FURNACE_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier("ag", "industrial_furnace"), IndustrialFurnaceScreenHandler::new);
+        INDUSTRIAL_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier("ag", "industrial_furnace_block_entity"), FabricBlockEntityTypeBuilder.create(IndustrialFurnaceEntity::new, INDUSTRIAL_FURNACE).build(null));
+
         // Blocks
         Registry.register(Registry.BLOCK, new Identifier("ag", "generator"), GENERATOR);
         Registry.register(Registry.ITEM, new Identifier("ag", "generator"), new BlockItem(GENERATOR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
         Registry.register(Registry.BLOCK, new Identifier("ag", "electric_furnace"), ELECTRIC_FURNACE);
         Registry.register(Registry.ITEM, new Identifier("ag", "electric_furnace"), new BlockItem(ELECTRIC_FURNACE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
         Registry.register(Registry.BLOCK, new Identifier("ag", "alloy_furnace"), ALLOY_FURNACE);
         Registry.register(Registry.ITEM, new Identifier("ag", "alloy_furnace"), new BlockItem(ALLOY_FURNACE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+        Registry.register(Registry.BLOCK, new Identifier("ag", "industrial_furnace"), INDUSTRIAL_FURNACE);
+        Registry.register(Registry.ITEM, new Identifier("ag", "industrial_furnace"), new BlockItem(INDUSTRIAL_FURNACE, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
 
         Registry.register(Registry.BLOCK, new Identifier("ag", "block_of_carbon"), BLOCK_OF_CARBON);
