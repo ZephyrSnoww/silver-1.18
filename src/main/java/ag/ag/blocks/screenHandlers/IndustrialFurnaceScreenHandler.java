@@ -13,7 +13,7 @@ public class IndustrialFurnaceScreenHandler extends ScreenHandler {
     private final Inventory inventory;
 
     public IndustrialFurnaceScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(1));
+        this(syncId, playerInventory, new SimpleInventory(2));
     }
 
     public IndustrialFurnaceScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
