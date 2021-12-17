@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sis",
+    "cec",
+    "sis"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "e": {
+      "item": "ag:electric_furnace"
+    },
+    "c": {
+      "item": "ag:circut"
+    },
+    "s": {
+      "item": "ag:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "ag:industrial_furnace",
+    "count": 1
+  }
+}
