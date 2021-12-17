@@ -43,6 +43,8 @@ public class GeneratorScreenHandler extends ScreenHandler {
 
     @Override
     public ItemStack transferSlot(PlayerEntity player, int invSlot) {
+        System.out.println("transferSlot called");
+
         ItemStack newStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(invSlot);
 
