@@ -6,10 +6,13 @@ import ag.ag.items.materials.*;
 import ag.ag.blocks.*;
 import ag.ag.blocks.entities.*;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
@@ -17,8 +20,20 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.decorator.CountPlacementModifier;
+import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
+import net.minecraft.world.gen.decorator.SquarePlacementModifier;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.PlacedFeature;
 
 /**
  * The main mod class
@@ -43,6 +58,9 @@ public class Ag implements ModInitializer {
     public static Block BLOCK_OF_SILICON = new Block(FabricBlockSettings.of(Material.METAL));
     public static PinkLotus PINK_LOTUS = new PinkLotus(FabricBlockSettings.of(Material.UNDERWATER_PLANT));
     public static Block SOLAR_PANEL = new Block(FabricBlockSettings.of(Material.STONE));
+
+    public static ConfiguredFeature<?, ?> END_TITANIUM_ORE_CONFIGURED_FEATURE = Feature.ORE.configure(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.END_STONE), TITANIUM_ORE.getDefaultState(), 9));
+    public static PlacedFeature END_TITANIUM_ORE_PLACED_FEATURE = END_TITANIUM_ORE_CONFIGURED_FEATURE.withPlacement(CountPlacementModifier.of(10), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(64)));
 
     // Items
 //    public static Item BLOOD = new Item(new Item.Settings().group(ItemGroup.BREWING));
@@ -191,6 +209,11 @@ public class Ag implements ModInitializer {
 
         // Steel
         Registry.register(Registry.BLOCK, new Identifier("ag", "steel_block"), STEEL_BLOCK);
+
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("ag", "titanium_ore"), END_TITANIUM_ORE_CONFIGURED_FEATURE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("ag", "titanium_ore"), END_TITANIUM_ORE_PLACED_FEATURE);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier("ag", "titanium_ore")));
 
         // Items
 //        Registry.register(Registry.ITEM, new Identifier("ag", "blood"), BLOOD);
