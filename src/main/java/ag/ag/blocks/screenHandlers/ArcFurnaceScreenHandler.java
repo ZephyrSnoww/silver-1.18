@@ -9,15 +9,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
-public class IndustrialFurnaceScreenHandler extends ScreenHandler {
+public class ArcFurnaceScreenHandler extends ScreenHandler {
     private final Inventory inventory;
 
-    public IndustrialFurnaceScreenHandler(int syncId, PlayerInventory playerInventory) {
+    public ArcFurnaceScreenHandler(int syncId, PlayerInventory playerInventory) {
         this(syncId, playerInventory, new SimpleInventory(2));
     }
 
-    public IndustrialFurnaceScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
-        super(Ag.INDUSTRIAL_FURNACE_SCREEN_HANDLER, syncId);
+    public ArcFurnaceScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
+        super(Ag.ARC_FURNACE_SCREEN_HANDLER, syncId);
         checkSize(inventory, 1);
         this.inventory = inventory;
 
