@@ -27,7 +27,7 @@ public class Ag implements ModInitializer {
     // Blocks
     public static Generator GENERATOR = new Generator(FabricBlockSettings.of(Material.STONE));
     public static ElectricFurnace ELECTRIC_FURNACE = new ElectricFurnace(FabricBlockSettings.of(Material.METAL));
-    public static Block ALLOY_FURNACE = new Block(FabricBlockSettings.of(Material.METAL));
+    public static AlloyFurnace ALLOY_FURNACE = new AlloyFurnace(FabricBlockSettings.of(Material.METAL));
     public static IndustrialFurnace INDUSTRIAL_FURNACE = new IndustrialFurnace(FabricBlockSettings.of(Material.METAL));
 
     public static Block STEEL_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(5f).resistance(6f).requiresTool().sounds(BlockSoundGroup.METAL));
